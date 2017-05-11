@@ -1,0 +1,109 @@
+/*=========  手机登录页面样式  ===========*/
+
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/manager/arrow.png)no-repeat 0 5px;
+}
+.head_box>a:nth-of-type(2){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;right:20px;
+	background: red;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+.head_title{
+	width: 100%;height: 40px;
+	line-height: 42px;
+	font-size: 16px;
+	font-weight:bold;
+	color:#524343;	
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*============  头部导航栏样式  结束   =================*/
+
+/* ========  登录内容主体样式    开始==== */
+main{
+	width: 100%;height:auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 12vh;
+}
+.login_tip{
+	font-size: 15px;
+	color:#4DC3F6;
+	text-align: center;
+}
+.login_form{
+	width: 100%;
+}
+.phone_area , .phone , .password{
+	width: 100%;height: 7vh;
+	line-height: 7vh;
+	display: block;
+	text-indent: 1em;
+	margin-top: 4vh;
+}
+.phone_area , .phone , .password{
+	background:#D1D1D5;
+	font-size: 17px;
+    font-weight: bolder;
+	border-radius:5px ;
+	
+}
+.phone , .password{
+	color: #5F9EA0;
+}
+.confirm{
+	width: 100%;height: 7vh;
+	line-height: 7vh;
+	display: block;
+	margin-top: 4vh;
+	background: #888888;
+	color: #fff;
+	font-size: 17px;
+	font-weight: bolder;
+	text-align: center;
+	border-radius:5px ;
+}
+.phone_area{
+	position: relative;
+}
+.phone_area img{
+	width: 20px;height: 12px;
+	display: inline-block;
+	position: absolute;
+	top:3vh;right: 5vw;
+}
+.matter{
+	width: 100%;
+	text-align: center;
+	margin-top: 3vh;
+}
+.protocol{
+	color: blueviolet;
+}
+.bottom_box{
+	width: 100%;
+	margin-top: 6vh;
+}
+.bottom_box p{
+	text-align: center;
+	font-size: 15px;
+	color: #888888;
+}
+.bottom_box>p:last-child{
+	margin: 6px auto;
+}
+.bottom_box>p:last-child img{
+	width:64px;height: 64px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/* ========  登录内容主体样式    结束==== */

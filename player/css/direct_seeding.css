@@ -1,0 +1,198 @@
+/*    直播页面样式        */
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/magnifier2.png)no-repeat 1px 3px;
+	background-size: 19px 18px;
+}
+.head_box>a:nth-of-type(2){
+	width:40px;height: 32px;
+	position: absolute;
+	top:4px;right: 15px;
+	background: url(../image/user_48.png)no-repeat 6px 0px;
+	background-size: 36px 32px
+}
+.nav{
+	width: 100%;height: 40px;	
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+.nav a{
+	width: 40px;height: 40px;
+	display: inline-block;
+	line-height: 40px;
+	border-radius: 8px;
+	margin-right: 4vw;
+	color: #D87F7F;
+	/*font-size: 15px;*/
+}
+.nav>a:nth-of-type(1){
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}
+/*.nav a:visited{
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}*/
+/*============  头部导航栏样式  结束   =================*/
+
+/*====   荔枝榜单样式  开始   =====*/
+.Michael{
+	width: 100%;height: 15vh;
+	max-width: 640px;
+	min-width: 300px;
+	margin-top: 10px;
+	position: relative;
+}
+.micheal_Result{
+	width: 91%;
+	height: 13vh;
+    box-shadow: 1px 3px 0.5px hotpink;
+    border-radius: 3px;
+    border: 1px solid hotpink;
+    background: #FFFFFF;
+    position: absolute;top: 0;left: 15px;
+    z-index: 2;
+    overflow: hidden;
+}
+.micheal_bottom{
+	height: 14vh;
+	margin-left: 20px;
+    margin-right: 25px;
+    box-shadow: 1px 3px 0.5px hotpink;
+    border-radius: 3px;
+    border: 1px solid hotpink;
+    z-index: 1;
+}
+.micheal_title{
+	width: 30%;
+	display: inline-block;
+	color: #D87F7F;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	padding-left: 8px;
+	padding-right: 8px;
+	position: relative;
+    top: -10px;
+}
+.micheal_DJ{
+	width: 60%;
+	display: inline-block;
+	text-align: center;
+	padding-top: 10px;
+}
+.micheal_DJ a{
+	width: 30%;
+	display: inline-block;
+}
+.micheal_DJ a img{
+	width:100%;
+	height: 40px;
+	display: block;
+	border-radius: 44%;
+}
+.micheal_DJ a:first-child img{
+	border: 1px solid yellow;
+}
+.micheal_DJ a u{
+	font-size: 12px;
+	font-weight: bold;
+	color: #CA8585;
+}
+.micheal_more{
+	width:7vw;
+	height: 4vw;
+	position: absolute;top: 38px;right: 5px;
+	background:url(../image/more_47.png)no-repeat;
+	background-size: 23px 13px;
+}
+.crown{
+	width:11vw;
+	height: 5vw;
+	position: absolute;top: -2vw;left: 34vw;
+	background: url(../image/YCrown_48.png)no-repeat;
+	background-size: 9vw 7vw;
+}
+/*====   荔枝榜单样式  结束   =====*/
+
+/*====  直播音频区样式  开始  ====*/
+.Seed{
+	width: 100%;height: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 2vh;
+}
+.seed_nav{
+	width: 100%;
+	height: 7vw;
+	line-height: 4vh;
+}
+.seed_nav a{
+	width: 12vw;
+	height: 6vw;
+	display: inline-block;
+	border-radius: 30vw;
+	font-size: 14px;
+	color: #CA8585;
+	text-align: center;
+}
+.seed_nav .seed_click{
+	background: #CA8585;
+	color: #FFF;
+}
+.seed_lineHome{
+	width: 100%;height: auto;
+	overflow: hidden;
+	padding-bottom: 2vh;
+}
+.seed_linebox{
+	width: 105%;
+	height: 60vh;
+}
+.seed_linebox li{
+	width: 50%;height: 26vh;
+	margin-top: 2vh;
+	position: relative;
+	float: left;
+}
+.seed_linebox li img{
+	width: 90%;
+	height: 20vh;
+	display: block;
+	border-radius:5px;
+}
+.seed_linebox li h3{
+	font-size: 14px;
+	font-weight: bold;
+	color:#8A5050;
+}
+.seed_linebox li p{
+	font-size: 12px;
+	color: #CA8585;
+}
+.Play_state{
+	width: 90%;height: 3vh;
+	line-height: 3vh;
+	position: absolute;
+	bottom: 7vh;left:0;
+}
+.seed_linebox li .Play_state img{
+	width: 8vw;
+	height: 5vw;
+	display: inline-block;
+}
+.seed_linebox li .Play_state u{
+	font-size: 13px;
+	color:#fff;
+}
+
+/*====  直播音频区样式  结束  ====*/
+

@@ -1,0 +1,97 @@
+/*============推荐页面样式==============*/
+
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/magnifier2.png)no-repeat 1px 3px;
+	background-size: 19px 18px;
+}
+.head_box>a:nth-of-type(2){
+	width:40px;height: 32px;
+	position: absolute;
+	top:4px;right: 15px;
+	background: url(../image/user_48.png)no-repeat 6px 0px;
+	background-size: 36px 32px
+}
+.nav{
+	width: 100%;height: 40px;	
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+.nav a{
+	width: 40px;height: 40px;
+	display: inline-block;
+	line-height: 40px;
+	border-radius: 8px;
+	margin-right: 4vw;
+	color: #D87F7F;
+	/*font-size: 15px;*/
+}
+.nav>a:nth-of-type(3){
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}
+/*.nav a:visited{
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}*/
+/*============  头部导航栏样式  结束   =================*/
+/*===========   推荐页面主体内容 的样式   开始  ==============*/
+main{
+	width: 100%;height:auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 2vh;
+	/*margin-top: 10vh;	*/
+	overflow: hidden;
+}
+.life_recombox{
+	width: 105%;
+	padding-top: 7vh;	
+}
+.life_recombox li{
+	width: 50%;height: 21vh;
+	margin-top: 2vh;
+	position: relative;
+	float: left;	
+}
+.life_recombox  li img{
+	width: 90%;
+	height: 15vh;
+	display: block;
+	border-radius:5px;
+}
+.life_recombox  li h3{
+	font-size: 14px;
+	font-weight: bold;
+	color:#8A5050;
+}
+.life_recombox  li p{
+	font-size: 12px;
+	color: #CA8585;
+}
+.Play_state{
+	width: 90%;height: 3vh;
+	line-height: 3vh;
+	position: absolute;
+	bottom: 6vh;left:0;
+}
+.life_recombox  li .Play_state img{
+	width: 8vw;
+	height: 5vw;
+	display: inline-block;
+}
+.life_recombox li .Play_state u{
+	font-size: 13px;
+	color:#fff;
+}
+
+
+/*===========   推荐页面主体内容 的样式   开始  ==============*/

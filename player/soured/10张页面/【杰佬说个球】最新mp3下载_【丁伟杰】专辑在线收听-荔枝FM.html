@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://m.lizhi.fm/1962163/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM</title>
+    <meta name="keywords" content="杰佬说个球,2016最新杰佬说个球,杰佬说个球mp3下载">
+    <meta name="description" content="杰佬说个球的播客主页,在线收听杰佬说个球,足球名嘴丁伟杰，带你畅游足球世界">
+    <link type="image/x-icon" href="http://m.lizhi.fm/images/favicon.ico" rel="shortcut icon">
+    <link rel="Shortcut Icon" href="http://m.lizhi.fm/images/favicon.ico">
+    <link rel="Bookmark" href="http://m.lizhi.fm/images/favicon.ico">
+    <link rel="prefetch" href="http://m.lizhi.fm/images/favicon.png">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <script src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/hm.js"></script><script>
+(function () {
+    var report = window.__report = {};
+    report.startTime = (new Date).getTime();
+    report.UUID = Math.random() * 1E9 | 0;
+    report.longestImgTime = 0;
+    report.longestImg = '';
+    var onLoad = window.__report.onLoad = (function () {
+        return function ( callback, errorFn, el ) {
+            errorFn = errorFn || function () {};
+            el = el || window;
+            if (typeof callback === 'function') {
+                if (el.addEventListener) {
+                    el.addEventListener( 'load', callback )
+                } else {
+                    el.attachEvent( 'onload', callback )
+                }
+            } else {
+                console.error( 'The callback is not a function!' );
+            }
+            if (el.addEventListener) {
+                el.addEventListener( 'error', errorFn )
+            } else {
+                el.attachEvent( 'onerror', errorFn )
+            }
+        };
+    })();
+    var doSend = function ( failImgs ) {
+        (function () {
+            var trackImg = new Image();
+            trackImg.src = 'http://s.cdn.lizhi.fm/pv?Times=' + (new Date).getTime() + '&fail=' + encodeURIComponent( failImgs.splice( 0, 3 ).join( "," ) ) + '&url=' + encodeURIComponent( this.longestImg ) + '&UT=' + this.longestImgTime + '&loading=' + (this.loadedTime - this.startTime) + '&ver=1&UUID=' + this.UUID;
+        }).apply( report, arguments );
+    };
+    report.send = function () {
+        (function () {
+            var imgs = document.getElementsByTagName( "img" );
+            var failImgs = [];
+            for (var i = 0; i < imgs.length; i++) {
+                var img = imgs[i];
+                if (img.hasPushed) {
+                    if (img.fail) {
+                        failImgs.push( img.src );
+                    } else if (!img.hasComplete) {
+                        failImgs.push( img.src );
+                    } else {
+                        if (img.hasComplete - img.hasPushed > this.longestImgTime) {
+                            this.longestImg = img.src;
+                            this.longestImgTime = img.hasComplete - img.hasPushed;
+                        }
+                    }
+                }
+            }
+            doSend( failImgs );
+            failImgs = [];
+        }).apply( report, arguments );
+    };
+    var checkImg = function ( img ) {
+        if (img.readyState == undefined) {
+            if (img.complete === true) {
+                if (img.naturalWidth > 0) {
+                    return "complete";
+                } else {
+                    return "fail";
+                }
+            }
+        } else if (img.readyState === 'complete') {
+            return "complete";
+        }
+        return "undefined";
+    };
+    var t;
+    var tFn = function () {
+        var i, imgs = document.getElementsByTagName( 'img' ), newDate = (new Date).getTime();
+        for (i = 0; i < imgs.length; i++) {
+            (function ( img ) {
+                if (!img.hasPushed) {
+                    img.hasPushed = newDate;
+                    if (!img.hasComplete) {
+                        var state = checkImg( img );
+                        if (state === "complete") {
+                            img.hasComplete = newDate;
+                        } else if (state === "fail") {
+                            img.hasComplete = newDate;
+                            img.fail = true;
+                        } else {
+                            onLoad( function () {
+                                var state = checkImg( img );
+                                if (state === "complete") {
+                                    img.hasComplete = (new Date).getTime();
+                                } else if (state === "fail") {
+                                    img.hasComplete = (new Date).getTime();
+                                    img.fail = true;
+                                }
+                            }, function () {
+                                img.hasComplete = (new Date).getTime();
+                                img.fail = true;
+                            }, img );
+                        }
+                    }
+                }
+            })( imgs[i] );
+        }
+    };
+
+    var domIsReady = (function () {
+        return function ( callback ) {
+            if (typeof callback === 'function') {
+                if (window.addEventListener) {
+                    document.addEventListener( "DOMContentLoaded", callback );
+                }
+                else {
+                    document.attachEvent( "onreadystatechange", function () {
+                        if (document.readyState === "complete") {
+                            return callback();
+                        }
+                    } );
+                }
+            }
+            else {
+                console.error( 'The callback is not a function!' );
+            }
+        }
+    })();
+    var perSet = {
+        bSupport: !!(window.performance && window.performance.getEntries),
+        getLongest: function ( reporter ) {
+            var entries = window.performance.getEntries();
+            for (var i = 0, len = entries.length; i < len; i++) {
+                var item = entries[i];
+                if (item.initiatorType === 'img' && reporter.longestImgTime < item.duration) {
+                    reporter.longestImgTime = item.duration.toFixed( 2 );
+                    reporter.longestImg = item.name;
+                }
+            }
+        },
+        getFail: function ( checkImg ) {
+            var aFail = [];
+            var imgs = document.getElementsByTagName( 'img' );
+            for (var i = 0, len = imgs.length; i < len; i++) {
+                if (checkImg( imgs[i] ) === 'fail') {
+                    aFail.push( imgs[i].src )
+                }
+            }
+            return aFail;
+        }
+    };
+    var getLoadedTime = function () {
+        report.loadedTime = (new Date).getTime();
+    };
+    if (!perSet.bSupport) {
+        onLoad( function () {
+            getLoadedTime();
+            report.send();
+        } );
+        domIsReady( function () {
+            if (t) {
+                clearInterval( t );
+                tFn();
+            }
+        } );
+        t = setInterval( tFn, 50 );
+    } else {
+        onLoad( function () {
+            getLoadedTime();
+            perSet.getLongest( report );
+            doSend( perSet.getFail( checkImg ) );
+        } );
+    }
+
+})()
+</script>
+
+    <link type="text/css" rel="stylesheet" media="all" href="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/8b177177fb4ca16b2f21ae48322dff2b-style.css">
+    <script type="text/javascript" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/bdce12c949e78d570c8d44e9c2b23508-jquery.js"></script>
+    <script type="text/javascript" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/5d5cb49191c56d3df8fe54e42a54cd3a-lizhiUI.js"></script>
+    <script type="text/javascript" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/ace5f3869bbad27c8aa8b838205bf1dd-affix.js"></script>
+    <script>
+        if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+            var version = parseFloat(RegExp.$1);
+            if(version>2.3){
+                var phoneScale = parseInt(window.screen.width)/640;
+                if(/MZ-M571C/.test(navigator.userAgent)){
+                    document.write('<meta name="viewport" content="width=640, minimum-scale = 0.5, maximum-scale= 0.5">');
+                }else if(/M571C/.test(navigator.userAgent)&&/LizhiFM/.test(navigator.userAgent)){
+                    document.write('<meta name="viewport" content="width=640, minimum-scale = 0.5, maximum-scale= 0.5">');
+                }else{
+                    document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+                }
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        }else{
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script><meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    
+    <meta name="apple-itunes-app" content="app-id=1093693053, app-argument=lizhifm://com.lizhifm.page/type=1&amp;radioId=27778383358555904">
+
+    <script>
+var _hmt = _hmt || [];
+!function(){
+    var onLoad;
+    try{
+        onLoad = window.__report.onLoad
+    }catch(e){
+        onLoad = function (cb) {cb()};
+    }
+    onLoad( function () {
+        (function () {
+            var hm = document.createElement( "script" );
+            hm.src = "//hm.baidu.com/hm.js?faa711b107a5b9ac578488389abc1f7a";
+            var s = document.getElementsByTagName( "script" )[0];
+            s.parentNode.insertBefore( hm, s );
+        })();
+        /*
+        (function () {
+            var hm = document.createElement( "script" );
+            hm.src = "//hm.baidu.com/hm.js?b929c459f6fe77e301abbf5db2837399";
+            var s = document.getElementsByTagName( "script" )[0];
+            s.parentNode.insertBefore( hm, s );
+        })();
+        */
+
+    } )
+}();
+
+</script>
+
+</head>
+
+<body>
+    
+    
+<div class="navbar" id="site-header-navbar">
+    <div class="wrap">
+        <a class="navbar-back" href="javascript:void(0);" onclick="goBack();return false;"></a>
+        <a class="navbar-home" href="http://m.lizhi.fm/"></a>
+        <div class="navbar-title">
+            杰佬说个球
+        </div>
+    </div>
+</div>
+<script>
+    if(/LizhiFM/i.test(window.navigator.userAgent)){
+        document.getElementById("site-header-navbar").style.display="none";
+    }
+</script>
+
+    <div class="wrap">
+        <div class="radio-img">
+            <img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_320x320.jpg" alt="">
+        </div>
+        <div class="article">
+            <div class="article-title">
+                FM1962163 &nbsp;&nbsp; 杰佬说个球
+            </div>
+            <div class="article-radiobar">
+                <div class="clearfix">
+                    <img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498488574677762_56x56_60x60.jpg" alt="丁伟杰">
+                    <a href="javascript:;" onclick="showSubscribe(this);" class="button rss">订阅</a>
+                    <p class="article-radiobar-main">丁伟杰</p>
+                </div>
+                <div class="article-radiobar-counter">
+                    <span>总播放量 1324万</span><span>粉丝 8.1万</span>
+                </div>
+            </div>
+            <div class="divider-dashed"></div>
+            
+            
+            <p>
+                <span style="font-size:120%;">资讯</span>-<a href="http://m.lizhi.fm/label/24229848358062512/" class="radio-info-label-label">体育</a>
+            </p>
+            
+            <p class="article-post" style="display:inline-block;">
+                足球名嘴丁伟杰，带你畅游足球世界
+            </p>
+            <div class="divider-dashed"></div>
+        </div>
+        <br>
+        <br>
+        
+            <div class="list audio-list" id="pg">
+                <h2 class="list-title">
+                    节目(918)
+                </h2>
+                
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2598204869435081222" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80.jpg" alt="多宝足球｜今晚赛事前瞻"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2598204869435081222" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">多宝足球｜今晚赛事前瞻</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-25 &nbsp;&nbsp; 25'27'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 147</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2598205728428550662" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80.jpg" alt="​杰出体育（下）｜从经理人奥克斯透露基士文的动向，到其西甲100"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2598205728428550662" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">​杰出体育（下）｜从经理人奥克斯透露基士文的动向，到其西甲100</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-25 &nbsp;&nbsp; 24'35'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 225</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2598207113555514886" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80.jpg" alt="杰出体育（上）｜分享伊巴谦莫域就诊的著名华裔膝盖医生傅浩强的"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2598207113555514886" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜分享伊巴谦莫域就诊的著名华裔膝盖医生傅浩强的</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-25 &nbsp;&nbsp; 20'30'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 287</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2598008855716346886" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80.jpg" alt="多宝足球｜回顾昨晚阿仙奴如何淘汰曼城"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2598008855716346886" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">多宝足球｜回顾昨晚阿仙奴如何淘汰曼城</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-24 &nbsp;&nbsp; 24'28'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 375</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2598020797873150470" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80.jpg" alt="杰出体育（下）｜细数美斯在巴塞的500个入球，及从利莱辛尼的传中"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2598020797873150470" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（下）｜细数美斯在巴塞的500个入球，及从利莱辛尼的传中</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-24 &nbsp;&nbsp; 24'57'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 431</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2598020596009681414" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（上）｜巴塞虽有尼玛缺阵，但仍有美斯挺身而出，从西班"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2598020596009681414" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜巴塞虽有尼玛缺阵，但仍有美斯挺身而出，从西班</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-24 &nbsp;&nbsp; 26'31'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 488</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597831112790206982" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="多宝足球｜昨晚赛事回顾，今晚前瞻"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597831112790206982" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">多宝足球｜昨晚赛事回顾，今晚前瞻</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-23 &nbsp;&nbsp; 24'29'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 447</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597819975939905542" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（下）｜谈及中超外援，望中超得到更多进步；从车仔折刺"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597819975939905542" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（下）｜谈及中超外援，望中超得到更多进步；从车仔折刺</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-23 &nbsp;&nbsp; 24'18'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 465</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597819520673367558" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（上）｜从费伦天拿对国米的入球大战，引申到意甲努力提"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597819520673367558" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜从费伦天拿对国米的入球大战，引申到意甲努力提</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-23 &nbsp;&nbsp; 26'31'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 468</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597661328431988230" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="多宝足球｜今晚多场焦点赛事前瞻"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597661328431988230" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">多宝足球｜今晚多场焦点赛事前瞻</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-22 &nbsp;&nbsp; 25'23'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 589</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597637396880725510" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（下）｜伊巴谦莫域的缺阵，会否令马迪尔成为曼联的X因"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597637396880725510" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（下）｜伊巴谦莫域的缺阵，会否令马迪尔成为曼联的X因</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-22 &nbsp;&nbsp; 24'33'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 895</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597636767668004870" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（上）｜希望从教练、记者及记者会等的进步，能令中超更"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597636767668004870" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜希望从教练、记者及记者会等的进步，能令中超更</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-22 &nbsp;&nbsp; 26'30'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 756</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597445886430108166" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（下）｜逐分钟睇曼联安德列治——最精彩的1:1"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597445886430108166" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（下）｜逐分钟睇曼联安德列治——最精彩的1:1</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-21 &nbsp;&nbsp; 24'40'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 935</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597445270108908038" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（上）｜从拉舒福特及马迪尔身上，看摩连奴对年轻人的鞭"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597445270108908038" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜从拉舒福特及马迪尔身上，看摩连奴对年轻人的鞭</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-21 &nbsp;&nbsp; 25'52'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 962</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597285112924364294" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="多宝足球｜昨晚赛事回顾，今晚前瞻"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597285112924364294" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">多宝足球｜昨晚赛事回顾，今晚前瞻</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-20 &nbsp;&nbsp; 26'22'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 1076</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597278769257577990" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（下）｜韦舒亚的伤患，会否成为其重返强队的障碍；众多"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597278769257577990" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（下）｜韦舒亚的伤患，会否成为其重返强队的障碍；众多</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-20 &nbsp;&nbsp; 26'46'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 1114</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597278575984046598" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（上）｜巴塞积极、不放弃的进攻，对阵极之紧"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597278575984046598" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜巴塞积极、不放弃的进攻，对阵极之紧</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-20 &nbsp;&nbsp; 25'56'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 857</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597089174362434054" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="多宝足球｜昨晚比赛回顾，今晚前瞻"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597089174362434054" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">多宝足球｜昨晚比赛回顾，今晚前瞻</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-19 &nbsp;&nbsp; 25'12'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 955</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597077346029401606" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（下）｜继续从球员到比赛，评点本场精彩大战；拜仁球员"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597077346029401606" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（下）｜继续从球员到比赛，评点本场精彩大战；拜仁球员</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-19 &nbsp;&nbsp; 25'28'' &nbsp;&nbsp; 0评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 799</p>
+                        </a>
+                    </div>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <div class="list-item">
+                        <div class="list-item-side">
+                            <a href="http://m.lizhi.fm/1962163/2597077142018453510" class="list-item-side-play"><img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/05/13/28498493679256324_80x80.jpg" alt="杰出体育（上）｜今日皇马拜仁点评，玩球员逐个数；细述昨晚的焦"></a>
+                        </div>
+                        <a href="javascript:;" onclick="downloadApp(this);" class="list-item-download"></a>
+                        <a href="http://m.lizhi.fm/1962163/2597077142018453510" class="list-item-main">
+                            <div class="list-item-title">
+                                <div style="display:inline-block;">杰出体育（上）｜今日皇马拜仁点评，玩球员逐个数；细述昨晚的焦</div>
+                            </div>
+                            <p class="list-item-desc">2017-04-19 &nbsp;&nbsp; 25'55'' &nbsp;&nbsp; 1评论</p>
+                            <p class="list-item-cnt"><i class="i-play-cnt"></i> 1083</p>
+                        </a>
+                    </div>
+                    
+                
+                <div class="list-divider-dashed"></div>
+            </div>
+            
+<div class="pager">
+    
+    
+    <a class="page" style="float:right;" href="http://m.lizhi.fm/1962163/p2#pg">下一页<b>&gt;</b></a>
+    
+    <span class="pagenum">1/46页</span>
+</div>
+
+            <br>
+            <br>
+        
+        
+            <div class="list album-list">
+                <h2 class="list-title">
+                    专辑
+                </h2>
+                
+                
+                    
+                    <a href="http://m.lizhi.fm/1962163/album/28817899667941787" class="list-item">
+                        <div class="list-item-side">
+                            <img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80(1).jpg" alt="【杰talk球坛】">
+                        </div>
+                        <div class="list-item-main">
+                            【杰talk球坛】
+                        </div>
+                    </a>
+                    
+                        <div class="list-divider"></div>
+                    
+                
+                    
+                    <a href="http://m.lizhi.fm/1962163/album/28564884473809307" class="list-item">
+                        <div class="list-item-side">
+                            <img src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/28498493679256324_80x80(1).jpg" alt="杰佬讲故事">
+                        </div>
+                        <div class="list-item-main">
+                            杰佬讲故事
+                        </div>
+                    </a>
+                    
+                
+                <div class="list-divider-dashed"></div>
+
+                
+            </div>
+            <br>
+            <br>
+        
+        
+            
+<div class="list">
+    
+        <h2 class="list-title">
+            相似播客
+        </h2>
+    
+    
+    
+        
+        <a href="http://m.lizhi.fm/1928974/" class="list-item">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/01/18/25802897038044676_80x80.jpg" alt="丁伟杰多宝足球世界">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1928974 丁伟杰多宝足球世界</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">多宝网</div>
+                </div>
+                <div class="list-item-audios">节目 490</div>
+                <div class="list-item-play-cnt">播放量 40.4万</div>
+            </div>
+        </a>
+        
+            <div class="list-divider"></div>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1251230/" class="list-item">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2016/09/28/2559411378004836356_80x80.jpg" alt="体坛先锋网络电台版">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1251230 体坛先锋网络电台版</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">体坛先锋</div>
+                </div>
+                <div class="list-item-audios">节目 1600</div>
+                <div class="list-item-play-cnt">播放量 1395万</div>
+            </div>
+        </a>
+        
+            <div class="list-divider"></div>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1757618/" class="list-item">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo="http://cdnimg103.lizhi.fm/radio_cover/2015/11/20/24444904887376388_80x80.jpg" alt="张达斌">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1757618 张达斌</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">张达斌</div>
+                </div>
+                <div class="list-item-audios">节目 7</div>
+                <div class="list-item-play-cnt">播放量 26320</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/459790/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2014/07/17/13052332068154882_80x80.jpg" alt="足球世界：粤语足球">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM459790 足球世界：粤语足球</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">赢足网</div>
+                </div>
+                <div class="list-item-audios">节目 688</div>
+                <div class="list-item-play-cnt">播放量 21.9万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/577946/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/10/15/2562624975641042436_80x80.jpg" alt="超锋粤语体育故事">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM577946 超锋粤语体育故事</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">超锋梁</div>
+                </div>
+                <div class="list-item-audios">节目 29</div>
+                <div class="list-item-play-cnt">播放量 69678</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1607993/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/05/29/28864804475351172_80x80.jpg" alt="多宝波经">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1607993 多宝波经</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">多宝波经</div>
+                </div>
+                <div class="list-item-audios">节目 180</div>
+                <div class="list-item-play-cnt">播放量 13.6万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1826380/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/09/04/2554979620287041028_80x80.jpg" alt="足球新势力">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1826380 足球新势力</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">足球新势力</div>
+                </div>
+                <div class="list-item-audios">节目 90</div>
+                <div class="list-item-play-cnt">播放量 12306</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1478772/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/05/06/28328798180675844_80x80.jpg" alt="菠萝球迷圈">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1478772 菠萝球迷圈</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">菠萝球迷圈</div>
+                </div>
+                <div class="list-item-audios">节目 85</div>
+                <div class="list-item-play-cnt">播放量 231.8万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/147915/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/01/29/26059576637802372_80x80.jpg" alt="LEECHORGWAN">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM147915 LEECHORGWAN</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">禅城拉舒福特</div>
+                </div>
+                <div class="list-item-audios">节目 26</div>
+                <div class="list-item-play-cnt">播放量 37785</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/927607/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2015/04/07/19168810386253316_80x80.jpg" alt="曼联时间">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM927607 曼联时间</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">曼联时间</div>
+                </div>
+                <div class="list-item-audios">节目 28</div>
+                <div class="list-item-play-cnt">播放量 46.7万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1457569/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/06/11/29155054610019332_80x80.png" alt="广东大次伟">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1457569 广东大次伟</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">广东大次伟</div>
+                </div>
+                <div class="list-item-audios">节目 49</div>
+                <div class="list-item-play-cnt">播放量 25547</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1891146/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2015/08/25/22418864386105220_80x80.jpg" alt="最足球FM">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1891146 最足球FM</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">最足球FM</div>
+                </div>
+                <div class="list-item-audios">节目 750</div>
+                <div class="list-item-play-cnt">播放量 10.8万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1757642/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/09/23/2558478326418491396_80x80.jpg" alt="5U体育">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1757642 5U体育</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">5U体育</div>
+                </div>
+                <div class="list-item-audios">节目 76</div>
+                <div class="list-item-play-cnt">播放量 184.7万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/844903/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/03/20/27242373312632324_80x80.jpg" alt="一些事一些情">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM844903 一些事一些情</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">hugo&amp;阿智</div>
+                </div>
+                <div class="list-item-audios">节目 277</div>
+                <div class="list-item-play-cnt">播放量 609.2万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1433648/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2015/09/06/22704490449322884_80x80.jpg" alt="孖宝">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1433648 孖宝</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">穿梭孖宝官方播客</div>
+                </div>
+                <div class="list-item-audios">节目 360</div>
+                <div class="list-item-play-cnt">播放量 18万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/385752/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2014/09/01/14116930443954306_80x80.jpg" alt="醉英超">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM385752 醉英超</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">醉英超</div>
+                </div>
+                <div class="list-item-audios">节目 89</div>
+                <div class="list-item-play-cnt">播放量 13.6万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1708320/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/04/13/27803172569135876_80x80.jpg" alt="老薛侃足球">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1708320 老薛侃足球</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">我不卡</div>
+                </div>
+                <div class="list-item-audios">节目 10</div>
+                <div class="list-item-play-cnt">播放量 4620</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/1746335/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/02/12/26385290849832836_80x80.jpg" alt="大话中国足球">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM1746335 大话中国足球</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">大话中国足球</div>
+                </div>
+                <div class="list-item-audios">节目 30</div>
+                <div class="list-item-play-cnt">播放量 30162</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/423748/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2014/08/13/13674479038427140_80x80.jpg" alt="张悦楷讲古：三国演义">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM423748 张悦楷讲古：三国演义</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">季彧</div>
+                </div>
+                <div class="list-item-audios">节目 157</div>
+                <div class="list-item-play-cnt">播放量 138.8万</div>
+            </div>
+        </a>
+        
+    
+        
+        <a href="http://m.lizhi.fm/507720/" class="list-item-hidden">
+            <div class="list-item-side">
+                <img width="80" height="80" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/80x80.png" data-echo-unload="http://cdnimg103.lizhi.fm/radio_cover/2016/11/28/2570693582927276548_80x80.png" alt="一些事一些情（全）">
+            </div>
+            <div class="list-item-main">
+                <div class="list-item-title">
+                    <div style="display:inline-block;">FM507720 一些事一些情（全）</div>
+                </div>
+                <div class="list-item-desc">
+                    <div style="display:inline-block;">阿杨仔</div>
+                </div>
+                <div class="list-item-audios">节目 1284</div>
+                <div class="list-item-play-cnt">播放量 91.3万</div>
+            </div>
+        </a>
+        
+    
+    <div class="list-divider-dashed"></div>
+</div>
+
+        
+    </div>
+
+    <div class="maskdiv">
+	    <div class="raised">
+
+	    	<div class="raised2">
+				<div class="rasiedTips">
+					<span>订阅喜欢的播客</span>
+				</div>
+				<div class="raisedContent">
+					<a href="javascript:;" onclick="downloadApp(this);" class="onlyDownloadDiv">
+						<span>下载 <span class="shareTextLogo vaMiddle"></span></span>
+					</a>
+					<div class="downloadAndPlayDiv">
+						<a href="javascript:;" onclick="downloadApp(this);" class="leftDownload"> 下载<span class="shareTextLogo vaMiddle"></span></a>
+						<div class="rightPlay">继续播放</div>
+					</div>
+				</div>
+			</div>
+            <div id="shut" onclick="hideSubscribe(this)"></div>
+		</div>
+
+		<div id="fade" class="blackOverlay"></div>
+	</div>
+    <script>
+        if(window.offFooter===true){
+        }else{
+            document.write('<a href="javascript:void(0);" onclick="downloadApp(this);" data-spy="affix" data-offset-top="200" id="footer" class="footer affix-top"></a><div class="footer-"></div>');
+        }
+    </script><a href="javascript:void(0);" onclick="downloadApp(this);" data-spy="affix" data-offset-top="200" id="footer" class="footer affix-top"></a><div class="footer-"></div>
+    
+
+    <script type="text/javascript" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/3d1afbe06ef4deab51e570e3216f9dc6-echo.min.js"></script>
+    <script>
+        ! function(root, doc) {
+            function initCookie(doc) {
+                if (!doc) doc = {};
+                if (typeof doc === 'string') doc = {
+                    cookie: doc
+                };
+                if (doc.cookie === undefined) doc.cookie = '';
+                var self = {};
+                self.get = function(key) {
+                    var splat = doc.cookie.split(/;\s*/);
+                    for (var i = 0; i < splat.length; i++) {
+                        var ps = splat[i].split('=');
+                        var k = decodeURIComponent(ps[0]);
+                        if (k === key) return decodeURIComponent(ps[1]);
+                    }
+                    return undefined;
+                };
+                self.set = function(key, value, opts) {
+                    if (!opts) opts = {};
+                    var s = encodeURIComponent(key) + '=' + encodeURIComponent(value);
+                    if (opts.expires) s += '; expires=' + opts.expires;
+                    if (opts.path) s += '; path=' + escape(opts.path);
+                    doc.cookie = s;
+                    return s;
+                };
+                self.del = function(key){
+                    self.set(key,"",{expires:"Thu, 01 Jan 1970 00:00:01 GMT"});
+                };
+                return self;
+            }
+            var cookie = initCookie(doc);
+            function setCookie(key, value, opts) {
+                opts = opts || {};
+                opts.path = opts.path || "/";
+                cookie.set(key, value, opts);
+            }
+            function getCookie(key) {
+                return cookie.get(key);
+            }
+            function delCookie(key) {
+                cookie.del(key);
+            }
+            window.getCookie = getCookie;
+
+            function searchToObject() {
+                var pairs = window.location.search.substring(1).split("&"),
+                obj = {},
+                pair,
+                    i;
+
+                for ( i in pairs ) {
+                    if ( pairs[i] === "" ) continue;
+                    pair = pairs[i].split("=");
+                    obj[ pair[0] ] = pair[1];
+                }
+                return obj;
+            }
+            var locationQuery=searchToObject();
+            var now = new Date();
+            var time = now.getTime();
+            var expireTime = time + 1000*60*60*24*7;
+            now.setTime(expireTime);
+            if(typeof locationQuery.source !="undefined"){
+                setCookie("source", locationQuery.source,{expires:now.toGMTString()});
+                if(typeof locationQuery.keyword !="undefined"){
+                    setCookie("keyword", locationQuery.keyword,{expires:now.toGMTString()});
+                }else{
+                    delCookie("keyword");
+                }
+            }else if(/(www|m)\.baidu\.com/.test(document.referrer)){
+                setCookie("source", "baiduseo",{expires:now.toGMTString()});
+                delCookie("keyword");
+            }else if(/(www|m)\.sogou\.com/.test(document.referrer)){
+                setCookie("source", "sogouseo",{expires:now.toGMTString()});
+                delCookie("keyword");
+            }else if(/(www|m)\.so\.com/.test(document.referrer)){
+                setCookie("source", "soseo",{expires:now.toGMTString()});
+                delCookie("keyword");
+            }else if(/(www|m)\.sm\.cn/.test(document.referrer)){
+                setCookie("source", "smseo",{expires:now.toGMTString()});
+                delCookie("keyword");
+            }
+        }(window, document);
+        function popup(popupName){
+            var _scrollHeight = $(document).scrollTop(),//获取当前窗口距离页面顶部高度
+            _windowHeight = $(window).height(),//获取当前窗口高度
+            //_windowWidth = $(window).width(),//获取当前窗口宽度
+            _popupHeight = popupName.height(),//获取弹出层高度
+            //_popupWeight = popupName.width();//获取弹出层宽度
+            _posiTop = (_windowHeight - _popupHeight)/2 + _scrollHeight; //这里要加上滚动条的高度
+            //_posiLeft = (_windowWidth - _popupWeight)/2;
+            //popupName.css({"left": _posiLeft + "px","top":_posiTop + "px","display":"block"});//设置position
+            popupName.css({"top":_posiTop + "px"});//设置position
+        }
+        function showSubscribe(el){
+            $(".maskdiv").show();
+            popup($(".raised"));
+            $(".rasiedTips span").html("订阅喜欢的播客");
+            $(".onlyDownloadDiv").show();
+            $(".downloadAndPlayDiv").hide();
+        }
+        function hideSubscribe(el){
+            $(".maskdiv").hide();
+        };
+        function goBack()
+        {
+            if(window.history.length!==1){
+                window.history.back();
+            }else{
+                window.location.href="/";
+            }
+        }
+        echo.init({
+            offset: 200,
+            throttle: 100,
+            unload: false,
+            callback: function (element, op) {
+            }
+        });
+
+        var wxUa=navigator.userAgent.toLowerCase().match(/.*?(micromessenger\/([0-9.]+))\s*/);
+        function downloadApp(element){
+            if(LizhiUI.isWinPhone()){
+                return document.location='//www.lizhi.fm/download/wp';
+            }
+            document.location = '/get_app/';
+        }
+    </script>
+    <img height="0" width="0" src="./【杰佬说个球】最新mp3下载_【丁伟杰】专辑在线收听-荔枝FM_files/320.png" alt="">
+
+
+
+
+</body></html>

@@ -1,0 +1,91 @@
+html,body,div,ul,li,form,p,h1,h2,h3,h4,h5,h6,input,textarea,img,span,a,header,nav,main,section{
+	margin: 0;padding:0;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+}
+.fl{float: left;}
+.fr{float: right;}
+
+html{
+	width: 100%;
+	height: 100%;
+	background: #f3f7f3;
+	/*overflow: hidden;*/
+}
+body{
+	font-size: 17px;
+	font-family: "微软雅黑",sans-serif;
+	color:#333;
+}
+a{
+	text-decoration: none;
+	color:#333;
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+
+}
+li{
+	list-style: none;
+}
+i,s,b,u{
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix::after{
+	content:"";
+	clear:both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+img{
+	border: 0;
+	display: block; /*为了清除底部间隙*/
+}
+input,textarea{
+	outline: none;
+	border:none;
+}
+.Layout{
+	width: 100%;height: auto;
+	max-width: 640px;
+	min-width: 300px;
+	margin: 0 auto;
+	background: #F5F7F3;
+}
+.header{
+	position: fixed;top:0px;left: 0px;
+	width: 100%;height:40px;
+	z-index: 10;
+}
+.head_box{
+	width: 100%;height: 40px;
+	max-width: 640px;min-width: 300xp;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+	background: lightblue;
+}
+
+/*=====  精灵浮动播放器样式  开始  =======*/
+.Spirit_box{
+	width: 50px;height: 50px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+.Spirit_box img{
+	width:50px;height: 50px;
+	display: block;
+	border: 3px solid #fff;
+	border-radius: 50%;
+}
+/*=====  精灵浮动播放器样式  开始  =======*/

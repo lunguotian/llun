@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		<div class="Layout">
+			<header class="header">
+				<div class="head_box">
+					<a href="management.html"></a>
+					<span class="head_title">手机注册</span>
+					<a href="login.html">登录</a>
+				</div>
+			</header>
+			<main>
+				<p class="register_tip">手机号仅用于安全验证，不会泄漏你的任何信息</p>
+				<form class="register_form">
+					<a class="phone_area" href="attribution.html">中国大陆(+86) <img src="image/register/triangle_down_27.png"/></a>
+					<input class="phone" type="search" placeholder="请输入你的手机号码" x-webkit-grammar="builtin:search" lang="zh-CN">
+					<div class="validate clearfix">
+						<input type="search" placeholder="请输入验证码" x-webkit-grammar="builtin:search" lang="zh-CN">						
+						<input type="button" value="获取验证码"/>
+					</div>
+					<input class="password" type="search" placeholder="6位密码" x-webkit-grammar="builtin:search" lang="zh-CN">
+					<input class="confirm" type="button" value="确认"/>
+					<p class="matter">
+						<span class="tick"></span>
+						我已阅读并接受
+						<a class="protocol" href="javascript:;">《信息存储空间服务协议》</a>
+					</p>
+				</form>
+				
+				<div class="bottom_box">
+					<p>使用以下方式直接登录</p>
+					<p>
+						<img src="image/register/sina_weibo_64.png"/>
+						<img src="image/register/tencent_mobileqq_64.png"/>
+						<img src="image/register/tencent_mm_64.png"/>						
+					</p>
+				</div>
+			</main>
+		</div>
+		
+		<script type="text/javascript">
+			var R_phone = document.querySelector('.phone');
+			var R_password = document.querySelector('.password');
+			var resigter = document.querySelector('.confirm');
+			var userPass = [];
+			
+			R_phone.onblur=function(){
+				//checkNum(R_phone);
+				checkPhone();
+			}
+			R_password.onblur=function(){
+				checkNum(R_password);
+			}
+			
+			//检查字符数量方法
+			function checkNum(w){
+				var reg = /\w{6,18}/;
+				var pho = reg.exec(w.value);
+				if(!pho){
+					w.value = '';
+					w.placeholder = '号码格式错误!';
+				}
+			}
+			//检查手机号码
+			function checkPhone(){
+				var reg = /^1[34578]\d{9}$/;
+				var pone = reg.exec(R_phone.value);
+				if(!pone){
+					R_phone.value = '';
+					R_phone.placeholder = '号码不符规定！';
+				}
+			}
+			
+			resigter.onclick=function(){
+				var un = R_phone.value;
+				var pw = R_password.value;
+				
+				var json = {
+					'un':un,
+					'pw':pw
+				}
+				userPass.push(json);
+				var str = JSON.stringify(userPass);
+				window.localStorage.setItem('user-pass',str);
+				window.location.href="login.html";
+			}
+		</script>
+	</body>
+</html>

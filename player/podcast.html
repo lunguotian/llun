@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>播客</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/podcast.css"/>
+	</head>
+	<body>
+		<div class="Layout">
+			<header class="header">
+				<div class="head_box">
+					<a href="setting.html"></a>
+					<span class="head_title">我的播客</span>
+				</div>
+			</header>
+			
+			<form action="" method="post">				
+				<div class="logo_box">
+					<img src="">
+					<span class="more_logo"><input type="file"/></span>
+				</div>
+				
+				<input class="p_theme" type="text" placeholder="播客主题..."/>
+				<input class="p_tip" type="text" placeholder="80个字以内的播客推介..."/>
+				<input class="save" type="button" value="保存"/>
+			</form>
+		</div>
+		
+		<script type="text/javascript">
+			var fileDom = document.querySelector('input[type=file]');
+			var logo_img = document.querySelector('img');
+			var bk_theme = document.querySelector('.p_theme');
+			var bk_tip = document.querySelector('.p_tip');
+			var bk_save = document.querySelector('.save');
+			var data = [];
+			var newTask;		
+			
+			fileDom.onchange=function(){
+				var file = event.target.files||event.dataTransfer.files;
+				console.log(file);
+				if(file){
+					var fil = file[0];
+					var reader = new FileReader();
+					reader.readAsDataURL(fil);
+					reader.onload=function(){
+						logo_img.src=reader.result;
+					}
+				}
+			}
+			bk_save.onclick=function(){
+				var json = window.localStorage.getItem('user-pass');
+				json = JSON.parse(json);
+				for(var i=0;i<json.length;i++){
+					if(json[i].state==true){
+						newTask = {
+							'un':json[i].un,
+							'pw':json[i].pw,
+							'state':json[i].state,
+							"bk_theme":bk_theme.value,
+							"bk_tip":bk_tip.value,
+							"src":logo_img.src
+						};
+						json[i]=newTask;
+						console.log('转换前：'+json);
+						var str = JSON.stringify(json);
+						console.log(json);
+						window.localStorage.setItem('user-pass',str);
+						window.location.href="management.html";
+					}
+				}
+			}
+			
+		</script>
+		
+	</body>
+</html>

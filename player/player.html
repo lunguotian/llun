@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />	
+		<title>正在播放</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/player.css"/>
+	</head>
+	<body>
+		<div class="player_layout">
+			<header class="player_header">
+				<div class="playerhead_box">
+					<a href="direct_seeding.html">&lt;</a>
+					<div class="fmheader_title">
+						正在播放:
+						<span fmheader_txt>FM1785064</span>
+					</div>
+					<a href="javascript:;">换肤</a>
+					<a href="javascript:;">...</a>					
+				</div>
+			</header>
+			<div class="player_main">
+				<div class="fm_nowBox">
+					<div class="fm_now">			
+						<img src="image/player/jj.jpg"/>
+						<h3><u>50</u>&nbsp;<span>孩子的性别，谁说...</span></h3>
+						<p>FM1785064 婊酱</p>
+					</div>
+				</div>				
+				<div class="fm_list">
+					<ul class="clearfix">
+						
+					</ul>
+					<div class="axis_box clearfix">
+						<span class="wsize now_time">03:06</span>
+						<div class="progress_bar"></div>
+						<span class="wsize total_time">23:15</span>
+						<a class="wsize HQ" href="javascript:;"></a>
+					</div>
+				</div>
+			</div>
+			<div class="player_bottom">
+				<div class="SZM">
+					<div class="SZM_top">
+						<span class="szm_wai clearfix">							
+							<a class="play" href="javascript:;"></a>							
+							<a class="play_pre" href="javascript:;"></a>
+							<a class="play_next" href="javascript:;"></a>
+						</span>
+						<a class="retreat" href="javascript:;"></a>
+						<a class="fast" href="javascript:;"></a>
+					</div>
+					<div class="SZM_down">
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;">2X</a>
+					</div>
+				</div>
+			</div>
+			<audio src=""></audio>
+		</div>
+		
+		<!--<script src="js/template-native.js" type="text/javascript"></script>
+		<script id="fm_menu" type="text/javascript">
+			<%for(var i=0;i<data.length;i++){%>
+				<li  class="fm_list_li">
+					<h4 class="fm_list_h4">
+						<u><%=data[i].number%></u>&nbsp;
+						<span><%=data[i].title%></span>
+					</h4>	
+					<p class="fm_list_p"><%=data[i].anchor%></p>
+					<span class="fm_curtime"><%=data[i].curtime%></span>
+				</li>
+			<%}%>
+		</script>-->
+		
+		<script type="text/javascript">
+			var ul = document.querySelector('ul');
+			var fm_audio = document.querySelector('audio');
+			var fm_lis = document.getElementsByClassName('.fm_list_li');
+			var play = document.querySelector('.play');
+			var play_pre = document.querySelector('.play_pre');
+			var play_next = document.querySelector('.play_next');
+			var now_time = document.querySelector('.now_time');
+			var total_time = document.querySelector('.total_time');
+		
+			var xhr = new XMLHttpRequest();
+			xhr.open('get','jsonHome/fmMenu.json');
+			xhr.send(null);
+			xhr.onreadystatechange=function(){
+				if(xhr.status==200&&xhr.readyState==4){
+					var data = xhr.responseText;
+					data = JSON.parse(data);
+					console.log(data);
+//					var html = template('fm_menu',{data:data});
+//					ul.innerHTML = html;
+					
+					ul.innerHTML="";
+					for(var i=0;i<data.length;i++){
+						ul.innerHTML += "<li class='fm_list_li'><h4 class='fm_list_h4'><u>"+data[i].number+"</u>&nbsp;<span>"+data[i].title+"</span></h4><p class='fm_list_p'>"+data[i].anchor+"<span class='fm_curtime'>"+data[i].total_time+"</span></p></li>";
+//						ul.innerHTML += "	<h4 class='fm_list_h4'><u>"+data[i].number+"</u>&nbsp;<span>"+data[i].title+"</span></h4>";
+//						ul.innerHTML += "	<p class='fm_list_p'>"+data[i].anchor+"<span class='fm_curtime'>"+data[i].total_time+"</span></p>";
+//						ul.innerHTML += "</li>";
+					}
+					
+				for(var k=0;k<6;k++){						
+//						fm_lis[k].onclick=function(){
+							fm_audio.src = "audio/"+data[k].audio_src;
+//						}
+					}
+					console.log('有data.length条人物的数据;有'+fm_lis.length+'条歌曲列表数据');
+					console.log('音频进来了没？当前音频的url是：'+fm_audio.src);					
+				}
+
+			}
+					
+			fm_audio.oncanplay=function(){
+				var it_duration = fm_audio.duration;
+				console.log('音频全部时间：'+it_duration);
+				var m2 = Math.floor(it_duration/60);
+				var s2 = Math.floor(it_duration%1);
+//				m2 = checkTime(m2);
+				s2 = checkTime(s2);
+				console.log('音频全部时间：'+m2+":"+s2);
+				total_time.innerHTML = m2+":"+s2;
+				play.onclick=function(){
+					fm_audio.play();
+				}						
+			}
+			fm_audio.ontimeupdate=function(){
+				var n_time = fm_audio.currentTime;
+				var m1 = Math.floor(n_time/60);
+				var s1 = Math.floor(n_time%1);
+//				m1 = checkTime(m1);
+				s1 = checkTime(s1);
+				now_time.innerHTML = m1+":"+s1;
+			}			
+			
+			function checkTime(t){
+				if(t<10){
+					t="0"+t;
+				}
+				return t;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,207 @@
+/*===============  订阅页面样式  =============*/
+
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/magnifier2.png)no-repeat 1px 3px;
+	background-size: 19px 18px;
+}
+.head_box>a:nth-of-type(2){
+	width:40px;height: 32px;
+	position: absolute;
+	top:4px;right: 15px;
+	background: url(../image/user_48.png)no-repeat 6px 0px;
+	background-size: 36px 32px
+}
+.nav{
+	width: 100%;height: 40px;	
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+.nav a{
+	width: 40px;height: 40px;
+	display: inline-block;
+	line-height: 40px;
+	border-radius: 8px;
+	margin-right: 4vw;
+	color: #D87F7F;;
+	/*font-size: 15px;*/
+}
+.nav>a:nth-of-type(4){
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}
+/*.nav a:visited{
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}*/
+/*============  头部导航栏样式  结束   =================*/
+
+/*=======  四种指示功能样式  开始  ==========*/
+.function_box{
+	width: 100%;height:auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 2vh;
+	overflow: hidden;	
+}
+.four_fnbox{
+	width: 105%;
+	padding-top: 7vh;		
+}
+.four_fnbox li{
+	width: 46%;height: 5vh;
+	margin-top: 1vh;
+	margin-right: 3vw;
+	position: relative;
+	float: left;
+	background: #c6e2b8;
+	border-radius: 5px;
+}
+.four_fnbox li span{
+	width:2vh;height: 3vh;
+	position: absolute;
+	top: 1vh;left: 3vh;
+}
+.four_fnbox li:nth-of-type(1) span{
+	background:url(../image/recommend_img/icon-list.png)no-repeat -88px 4px;	
+}
+.four_fnbox li:nth-of-type(2) span{
+	background:url(../image/recommend_img/icon-list.png)no-repeat -56px 4px;	
+}
+.four_fnbox li:nth-of-type(3) span{
+	background:url(../image/recommend_img/icon-list.png)no-repeat -38px 4px;	
+}
+.four_fnbox li:nth-of-type(4) span{
+	background:url(../image/recommend_img/icon-list.png)no-repeat 0px 4px;	
+}
+.four_fnbox li a{
+	width: 100%;height: 5vh;
+	display:block;
+	padding-left: 1vw;
+	padding-top: 1vh;
+	text-align: center;
+	line-height: 3vh;
+	font-size:14px;
+	font-weight: bold; 
+}
+/*=======  四种指示功能样式  开始  ==========*/
+
+/*==================  main内容主体样式   开始  ===================*/
+main{
+	width: 100%;height: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.top_seed{
+	width: 100%;
+	margin-top: 2vh;
+}
+.top_seed p{
+	font-size: 17px;
+	font-weight: bold;
+	color:#D87F7F; 
+}
+.top_seed ul{
+	width: 100%;height: auto;
+}
+.top_seed ul li{
+	width: 100%;
+	margin-top: 2vh;
+}
+.top_seed ul li img{
+	width: 30%;
+	height: 12vh;
+	display: inline-block;
+	border-radius: 5px;
+}
+.top_seed ul li a{
+	width: 60%;height: 10vh;
+	display:inline-block;
+    padding-left: 2vw;	
+}
+.top_seed ul li a h3{
+	font-size: 17px;
+	font-weight: bold;
+	color:#8A5050;	
+}
+.top_seed ul li a p{
+	font-size: 13px;
+	color: #CA8585;	
+}
+.top_seed ul li a .Play_state{
+	height: 3vh;
+	margin-top: 1vh;
+    border-radius: 10px;
+	background: hotpink;
+	opacity: 0.5;	
+}
+.top_seed ul li a .Play_state img{
+	width: 8vw;
+	height: 5vw;
+	display: inline-block;	
+}
+.top_seed ul li a .Play_state u{
+	font-size: 13px;
+	color:#fff;
+}
+
+.bottom_fm{
+    width: 100%;
+    margin-top: 2vh;	
+}
+.bottom_fm p{
+	font-size: 17px;
+	font-weight: bold;
+	color:#D87F7F; 
+}
+.bottom_fm ul{
+	width: 100%;height: auto;
+}
+.bottom_fm ul li{
+	width: 100%;
+	margin-top: 1vh;
+}
+.bottom_fm ul li img{
+	width: 15%;
+	height: 10vh;
+	display: inline-block;
+	border-radius: 5px;
+}
+.bottom_fm ul li a{
+	width: 80%;height: 10vh;
+	display:inline-block;
+	padding-left: 2vw;
+}
+.bottom_fm ul li a h3{
+	font-size: 17px;
+	font-weight: bold;
+	color:#8A5050;	
+}
+.bottom_fm ul li a p{
+	font-size: 13px;
+	color: #CA8585;	
+}
+.bottom_fm ul li a .Play_state{
+	height: 3vh;
+	border-radius: 10px;
+	background: hotpink;
+	opacity: 0.5;	
+}
+.bottom_fm ul li a .Play_state img{
+	width: 8vw;
+	height: 5vw;
+	display: inline-block;	
+}
+.bottom_fm ul li a .Play_state u{
+	font-size: 13px;
+	color:#fff;
+}
+/*==================  main内容主体样式   开始  ===================*/

@@ -1,0 +1,81 @@
+/*=========  播客页面样式  ===========*/
+
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/manager/arrow.png)no-repeat 0 5px;
+}
+.head_title{
+	width: 100%;height: 40px;
+	line-height: 42px;
+	font-size: 16px;
+	font-weight:bold;
+	color:#524343;	
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*============  头部导航栏样式  结束   =================*/
+
+/*========  播客表单样式  开始  ============*/
+form{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10vh;	
+}
+form .logo_box{
+	width: 150px;height: 150px;
+	border-radius: 10px;	
+	margin: 0 auto;
+	position: relative;
+}
+form .logo_box img{
+	width: 150px;height: 150px;
+	display: block;
+	border-radius: 10px;
+}
+.more_logo{
+	width: 90px;height: 90px;
+	display: block;
+	background: url(../image/manager/camera_96.png)no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 5;
+}
+.more_logo>input{
+	width: 90px;height: 90px;
+	display: block;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	opacity: 0;filter: alpha(opacity=0);
+	z-index: 10;
+}
+
+
+form>input{
+	width: 100%;
+	display: block;
+	border-radius: 3px;
+	background: #ADD8E6;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2vh;
+}
+form>input:nth-of-type(1){
+	height: 6vh;
+}
+form>input:nth-of-type(2){
+	height: 9vh;
+}
+form .save{
+	width: 20%;height: 5vh;
+	background: red;
+	color: white;
+	margin: 8px auto 8px;
+}
+/*========  播客表单样式  结束  ============*/

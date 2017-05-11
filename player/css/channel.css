@@ -1,0 +1,80 @@
+/*======   频道页面样式  开始  =========*/
+
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/magnifier2.png)no-repeat 1px 3px;
+	background-size: 19px 18px;
+}
+.head_box>a:nth-of-type(2){
+	width:40px;height: 32px;
+	position: absolute;
+	top:4px;right: 15px;
+	background: url(../image/user_48.png)no-repeat 6px 0px;
+	background-size: 36px 32px
+}
+.nav{
+	width: 100%;height: 40px;	
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+.nav a{
+	width: 40px;height: 40px;
+	display: inline-block;
+	line-height: 40px;
+	border-radius: 8px;
+	margin-right: 4vw;
+	color: #D87F7F;
+	/*font-size: 15px;*/
+}
+.nav>a:nth-of-type(2){
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}
+/*.nav a:visited{
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid #D0A1A1;
+	color: red;
+}*/
+/*============  头部导航栏样式  结束   =================*/
+
+/*====  分类的主体内容框样式  开始   =======*/
+main{
+	width: 100%;height: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	/*margin-top: 10vh;	*/
+	overflow: hidden;
+}
+.fm_listbox{
+	width: 105%;
+	padding-top: 7vh;
+}
+.fm_listbox li{
+	width: 25%;
+	height: 14vh;
+	margin-top: 2vh;
+	float: left;
+}
+.fm_listbox li a{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+.fm_listbox li a img{
+	width: 64px;height: 64px;
+	display: block;
+}
+.fm_listbox li a u{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/*====  分类的主体内容框样式  结束   =======*/
+

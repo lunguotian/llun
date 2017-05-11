@@ -1,0 +1,208 @@
+* {
+  webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.liveItem {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 16px;
+  padding: 16px 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+.liveItem-cover {
+  position: relative;
+  width: 100%;
+  height: 205px;
+  border-radius: 4px;
+  background-size: 100% auto;
+  background-position: center center;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.liveItem-cover-img {
+  width: 100%;
+  border-radius: 4px;
+}
+.liveItem-meta {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  padding: 4px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.8);
+}
+.liveItem-meta-item {
+  display: inline-block;
+  margin-right: 12px;
+  height: 17px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.5);
+  vertical-align: top;
+}
+.liveItem-meta-item--lastChild {
+  margin-right: 0;
+}
+.liveItem-meta-icon {
+  margin-top: .5px;
+  margin-right: 3px;
+  width: 17px;
+  height: 16px;
+  vertical-align: top;
+}
+.liveItem-meta-text {
+  display: inline-block;
+  margin-top: 1px;
+  line-height: 17px;
+  font-size: 12px;
+  vertical-align: top;
+}
+.liveItem-meta-item--heighlight {
+  color: #00c853;
+}
+.liveItem-meta-item--lastChild {
+  margin-right: 0;
+}
+.liveItem-meta-item-highlight {
+  color: #00c853;
+}
+.liveItem-title {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.liveItem-title span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.liveItem-user {
+  margin-top: 8px;
+  height: 31px;
+  line-height: 31px;
+}
+.liveItem-user-avatar {
+  margin-right: 8px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+}
+.liveItem-user-name {
+  display: inline-block;
+  line-height: inherit;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  vertical-align: top;
+}
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100%;
+  color: #ffffff;
+  font-size: 15px;
+  background-color: #041E1D;
+  background-image: url("/assets/images/liveShare/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+html {
+  height: 100%;
+}
+.page-index-loading {
+  padding: 10px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+#tab {
+  height: 44px;
+  font-size: 0;
+  position: relative;
+}
+#tab .item {
+  line-height: 44px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+#tab .item.active {
+  color: #ffffff;
+}
+#tab .highlight {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0px;
+  height: 2px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.frame {
+  position: fixed;
+  top: 44px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+.frame .empty {
+  text-align: center;
+  padding-top: 258px;
+  background-repeat: no-repeat;
+  background-position: center 174px;
+  background-image: url(/assets/images/background.png);
+  background-size: 70px 70px;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.frame.active {
+  display: block;
+}
+.login {
+  text-align: center;
+}
+.login-text {
+  margin-top: 148px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.login-btn {
+  margin-top: 12px;
+  width: 215px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-image: none;
+}
+.login-qq-btn {
+  background-color: #4dc3f6;
+}
+.login-weixin-btn {
+  background-color: #00c853;
+}
+.login-close-btn {
+  z-index: -1;
+  margin-top: 40px;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=liveList.css.map */

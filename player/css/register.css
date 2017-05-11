@@ -1,0 +1,128 @@
+/*=========  手机注册页面样式  ===========*/
+
+/*============  头部导航栏样式  结束   =================*/
+.head_box>a:nth-of-type(1){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;left:15px;
+	background: url(../image/manager/arrow.png)no-repeat 0 5px;
+}
+.head_box>a:nth-of-type(2){
+	width: 40px;height: 24px;
+	position: absolute;
+	top:8px;right:20px;
+	background: red;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+.head_title{
+	width: 100%;height: 40px;
+	line-height: 42px;
+	font-size: 16px;
+	font-weight:bold;
+	color:#524343;	
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*============  头部导航栏样式  结束   =================*/
+
+/* ========  注册内容主体样式    开始==== */
+main{
+	width: 100%;height:auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10vh;
+}
+.register_tip{
+	font-size: 15px;
+	color:#4DC3F6;
+	text-align: center;
+}
+.register_form{
+	width: 100%;
+}
+.phone_area , .phone , .validate , .password , .confirm{
+	width: 100%;height: 7vh;
+	line-height: 7vh;
+	display: block;
+	text-indent: 1em;
+	margin-top: 2vh;
+}
+.phone_area , .phone , .validate>input:first-child , .password{
+	background:#D1D1D5;
+	font-size: 17px;
+    font-weight: bolder;
+	border-radius:5px ;
+	
+}
+.phone , .validate>input:first-child , .password{
+	color: #5F9EA0;
+}
+.validate>input:last-child , .confirm{
+	background: #888888;
+	color: #fff;
+	font-size: 17px;
+	font-weight: bolder;
+	text-align: center;
+	border-radius:5px ;
+}
+.validate>input:first-child{
+	width: 60%;height: 7vh;
+	display: inline-block;
+	float: left;
+	text-indent: 1em;
+}
+.validate>input:last-child {
+	width: 35%;height: 7vh;	
+	display: inline-block;
+	float: right;
+}
+.phone_area{
+	position: relative;
+}
+.phone_area img{
+	width: 20px;height: 12px;
+	display: inline-block;
+	position: absolute;
+	top:3vh;right: 5vw;
+}
+.matter{
+	width: 100%;
+	position: relative;
+	text-indent: 2em;
+	margin-top: 1vh;
+}
+.matter>span{
+	width: 16px;height: 16px;
+	position: absolute;
+	top:4px;
+	left:14px;
+	border: 1px solid #333333;
+	border-radius: 50%;
+}
+.matter .tick{
+	background: url(../image/register/ok_tick_valider_24.png)no-repeat center center;
+}
+.protocol{
+	color: blueviolet;
+}
+.bottom_box{
+	width: 100%;
+	margin-top: 6vh;
+}
+.bottom_box p{
+	text-align: center;
+	font-size: 15px;
+	color: #888888;
+}
+.bottom_box>p:last-child{
+	margin: 6px auto;
+}
+.bottom_box>p:last-child img{
+	width:64px;height: 64px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/* ========  注册内容主体样式    结束==== */

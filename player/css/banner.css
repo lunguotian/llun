@@ -1,0 +1,61 @@
+/*=========== 直播页面的广告轮播图样式 开始  ===============*/
+.Bigbanner{
+	width: 100%;
+	height: auto;
+}
+.Banner{
+	height: 35vw;
+    max-height: 228px;
+	max-width: 640px;min-width: 300px;
+	/*margin-left: 17px;
+	margin-right: 20px;
+	margin-top: 50px;*/
+	margin: 50px 20px 0 16px;
+	border-radius: 40px;
+	overflow:hidden;
+	position: relative;
+	z-index: 3;
+}
+.slider{
+	width: 700%;
+	transform: translateX(-14%);
+	-webkit-transform: translateX(-14%);
+	z-index: 1;
+}
+.slider li{
+	width: 14%;
+	float: left;
+	z-index: 1;
+}
+.slider li a{
+	width: 100%;
+	display: block;
+	z-index: 1;
+}
+.slider li a img{
+	width: 100%;
+	display: block;
+	z-index: 1;
+}
+.solid_box{
+	width:118px;
+	height: 20px;
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	margin-left: -50px;
+	text-align: center;
+	z-index: 4;
+}
+.solid_box span{
+	width: 6px;height: 6px;
+	display: inline-block;
+	border-radius: 3px;
+	border: 1px solid #fff;
+	z-index: 4;
+}
+.solid_box .now{
+	background: #FFFF00;
+}
+
+/*=========== 直播页面的广告轮播图样式 结束  ===============*/

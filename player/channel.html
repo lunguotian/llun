@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>频道</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/channel.css"/>
+	</head>
+	<body>
+		<div class="Layout">
+			<header class="header">
+				<div class="head_box">
+					<a href="javascript:;"></a>
+					<a href="management.html"></a>
+					<div class="nav">
+						<a href="direct_seeding.html">直播</a>
+						<a href="channel.html">频道</a>
+						<a href="recommend.html">推荐</a>
+						<a href="subscribe.html">订阅</a>
+					</div>
+				</div>
+			</header>
+			<main>
+				<ul class="fm_listbox clearfix">
+					<!--<li>
+						<a href="javascript:;">
+							<img src="image/wolf_64.png"/>
+							<u>狼人杀</u>
+						</a>
+					</li>					-->
+				</ul>
+			</main>
+			<a class="Spirit_box" href="player.html">
+				<img src="image/seed_line1.png"/>					
+			</a>
+		</div>
+		
+		<script src="js/template-native.js" type="text/javascript"></script>
+		<script id="fm_channel" type="text/javascript">
+			<%for(var i=0;i<data.length;i++){%>
+				<li>
+					<a href="<%=data[i].page_href%>">
+						<img src="<%=data[i].img_src%>"/>
+						<u><%=data[i].theme%></u>
+					</a>
+				</li>
+			<%}%>
+		</script>
+		
+		<script type="text/javascript">
+			var ul = document.querySelector('.fm_listbox');
+			var xhr = new XMLHttpRequest();
+			xhr.open('get','jsonHome/channel.json');
+			xhr.send(null);
+			xhr.onreadystatechange=function(){
+				if(xhr.status==200&&xhr.readyState==4){
+					var data = xhr.responseText;
+					data = JSON.parse(data);
+					console.log(data);
+					var html = template('fm_channel',{data:data});
+					ul.innerHTML = html;
+				}
+			}
+		</script>
+	</body>
+</html>

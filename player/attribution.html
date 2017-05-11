@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>号码归属地</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/attribution.css"/>
+	</head>
+	<body>
+		<div class="Layout">
+			<header class="header">
+				<div class="head_box">
+					<a href="direct_seeding.html"></a>
+					<span class="head_title">归属地</span>
+				</div>
+			</header>
+			<main>
+				<ul class="atrbit_ul">
+					<li><a class="bg_orange" href="register.html">中国大陆(+86)</a></li>
+					<li><a href="register.html">中国香港(+852)</a></li>
+					<li><a href="register.html">中国澳门(+853)</a></li>
+					<li><a href="register.html">中国台湾(+886)</a></li>
+				</ul>
+			</main>
+		</div>
+		
+		<!--<script src="js/template-native.js" type="text/javascript"></script>
+		<script id="attribute_temp" type="text/javascript">
+			<%for(var i=0;i<data.length;i++){%>
+				<li><a class="bg_orange" href="register.html"><%=data[i].result.company%>(+<%=data[i].result.cardtype%>)</a></li>
+			<%}%>
+		</script>-->
+		<script type="text/javascript">
+			var atrbit_Ul = document.querySelector('.atrbit_ul');
+			var body = document.body;
+			
+			var script = document.createElement('script');
+			//script.src = 'http://api.jisuapi.com/areacode/query?appkey=15e12d4d2e40d0c8&areacode=0571&callback=report';
+			script.src = 'http://api.jisuapi.com/shouji/query?appkey=15e12d4d2e40d0c8&shouji=13536675234&callback=report';
+			body.appendChild(script);
+			window.report = function(data){
+				console.log(data);
+				//atrbit_Ul.innerHTML = "";
+				//var html = template('attribute_temp',{data:data});
+				//atrbit_Ul.innerHTML = html;				
+//				for(var i=0;i<data.length;i++){
+//					artbit_Ul.innerHTML+="<li><a class="+"bg_orange"+" href="+"register.html"+"><%="+data.result.company+"%>(+<%="+data.result.areacode+"%>)</a></li>";
+//				}
+				console.log('有什么:'+data.result.company+',还有：'+data.result.areacode);
+				//body.removeChild(script);
+			}
+		</script>
+	</body>
+</html>

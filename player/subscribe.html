@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订阅</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/subscribe.css"/>		
+	</head>
+	<body>
+		<div class="Layout">
+			<header class="header">
+				<div class="head_box">
+					<a href="javascript:;"></a>
+					<a href="management.html"></a>
+					<div class="nav">
+						<a href="direct_seeding.html">直播</a>
+						<a href="channel.html">频道</a>
+						<a href="recommend.html">推荐</a>
+						<a href="subscribe.html">订阅</a>
+					</div>
+				</div>
+			</header>
+			<div class="function_box">
+				<ul class="four_fnbox clearfix">
+					<li>
+						<span></span>
+						<a href="javascript">
+							下载列表
+							<u>5</u>
+						</a>
+					</li>
+					<li>
+						<span></span>
+						<a href="javascript">
+							已订阅播客
+							<u>15</u>
+						</a>
+					</li>
+					<li>
+						<span></span>
+						<a href="javascript">
+							历史收听
+							<u>138</u>
+						</a>
+					</li>
+					<li>
+						<span></span>
+						<a href="javascript">
+							收藏列表
+							<u>6</u>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<main>
+				<div class="top_seed">
+					<p>直播</p>
+					<ul class="onlineSeed_menu">
+						<!--<li>
+							<img src="image/recommend_img/seed1.jpg"/>
+							<a href="javascript:;">
+								<h3>[ASMR] 超宠溺有...</h3>
+								<p>南南屿&鱼总裁冠名词周</p>
+								<div class="Play_state">
+									<img src="image/rhythm.gif"/>
+									<u>直播</u>
+									<u>125人</u>
+								</div>
+							</a>
+						</li>-->
+					</ul>
+				</div>
+				<div class="bottom_fm">
+					<p>节目</p>
+					<ul class="fmProgram_menu">
+						<!--<li>
+							<img src="image/recommend_img/fm1.jpg"/>
+							<a href="javascript:;">
+								<h3>杰出体育(上)|伊巴谦莫域...</h3>
+								<p>杰佬说个球</p>
+								<div class="Play_state">
+									<img src="image/rhythm.gif"/>
+									<u>播放</u>
+									<u>125次</u>
+								</div>
+							</a>							
+						</li>-->
+					</ul>
+				</div>
+			</main>
+			<a class="Spirit_box" href="player.html">
+				<img src="image/seed_line1.png"/>					
+			</a>			
+		</div>
+		
+		
+		<script src="js/template-native.js" type="text/javascript"></script>
+		<script id="subscribe_seedOnline" type="text/html">
+			<%for(var i=0;i<resultA.length;i++){%>
+				<li>
+					<img src="<%=resultA[i].img%>"/>
+					<a href="javascript:;">
+						<h3><%=resultA[i].theme%></h3>
+						<p><%=resultA[i].anchor%></p>
+						<div class="Play_state">
+							<img src="image/rhythm.gif"/>
+							<u><%=resultA[i].state%></u>
+							<u><%=resultA[i].audience%></u>
+						</div>
+					</a>
+				</li>				
+			<%}%>
+		</script>
+		<script id="subscribe_fmProgram" type="text/html">
+			<%for(var i=0;i<resultB.length;i++){%>
+				<li>
+					<img src="<%=resultB[i].img%>"/>
+					<a href="javascript:;">
+						<h3><%=resultB[i].theme%></h3>
+						<p><%=resultB[i].anchor%></p>
+						<div class="Play_state">
+							<img src="image/rhythm.gif"/>
+							<u><%=resultB[i].stateB%></u>
+							<u><%=resultB[i].audience%></u>
+						</div>
+					</a>							
+				</li>
+			<%}%>
+		</script>
+		
+		<script type="text/javascript">
+			var onlineUl = document.querySelector('.onlineSeed_menu');
+			var programUl = document.querySelector('.fmProgram_menu');
+			
+			var xhr = new XMLHttpRequest();
+			xhr.open('get','jsonHome/subscribe.json');
+			xhr.send(null);
+			xhr.onreadystatechange=function(){
+				if(xhr.status==200&&xhr.readyState==4){
+					var data = xhr.responseText;
+					data = JSON.parse(data);
+					console.log(data);
+					var onlineHtml = template('subscribe_seedOnline',{resultA:data.onlineSeed});
+					var programHtml = template('subscribe_fmProgram',{resultB:data.fmProgram});
+					onlineUl.innerHTML = onlineHtml;
+					programUl.innerHTML = programHtml;
+				}
+			}
+		</script>
+		
+	</body>
+</html>
